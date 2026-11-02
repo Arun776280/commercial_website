@@ -1,0 +1,323 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf3;
+    color: #33251c;
+}
+
+/* Navbar */
+
+header {
+    background: #3b2418;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+}
+
+.logo span {
+    color: #e6a15c;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #e6a15c;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+/* Home */
+
+.home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 8%;
+    gap: 40px;
+}
+
+.home-content {
+    max-width: 550px;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.home-content h1 span {
+    color: #b66b35;
+}
+
+.home-content h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.home-content p {
+    color: #76675d;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.home-image img {
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #b66b35;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #3b2418;
+}
+
+/* Common Heading */
+
+.heading {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.heading span {
+    color: #b66b35;
+}
+
+/* About */
+
+.about {
+    padding: 80px 8%;
+    background: #f3e8d9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-content img {
+    width: 45%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #76675d;
+}
+
+/* Menu */
+
+.menu {
+    padding: 80px 8%;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.food-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px #00000012;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food-card h3 {
+    margin: 12px 0;
+}
+
+.food-card p {
+    color: #76675d;
+    font-size: 14px;
+}
+
+.food-card h4 {
+    color: #b66b35;
+    margin: 12px;
+    font-size: 20px;
+}
+
+.food-card button,
+.order-btn {
+    background: #3b2418;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.food-card button:hover,
+.order-btn:hover {
+    background: #b66b35;
+}
+
+/* Cart */
+
+.cart {
+    padding: 70px 8%;
+    text-align: center;
+    background: #f3e8d9;
+}
+
+#cart-items {
+    margin: 20px auto;
+    max-width: 500px;
+    line-height: 2;
+}
+
+.cart h3 {
+    margin: 20px;
+}
+
+/* Contact */
+
+.contact {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.contact-content {
+    line-height: 2.5;
+}
+
+/* Footer */
+
+footer {
+    background: #3b2418;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+
+@media(max-width: 900px) {
+
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-image img {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #3b2418;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-image img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        width: 100%;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Corner Cafe | Coffee & Delicious Food</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Corner<span>Cafe.</span></h2>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+            <h1>Welcome to <span>Corner Cafe</span></h1>
+
+            <h2>Fresh Coffee & Delicious Food</h2>
+
+            <p>
+                Experience the perfect combination of delicious food,
+                refreshing drinks and a beautiful atmosphere.
+            </p>
+
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+
+        <div class="home-image">
+            <img src="coffee.jpeg"
+                 alt="Coffee">
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2 class="heading">About <span>Us</span></h2>
+
+        <div class="about-content">
+
+            <img src="caffeelogo.jpeg"
+                 alt="Cafe interior">
+
+            <div>
+                <h3>Welcome to Our Cafe</h3>
+
+                <p>
+                    Corner Cafe is a perfect place to enjoy delicious food,
+                    freshly brewed coffee and unforgettable moments.
+                    We serve quality food with love and care.
+                </p>
+
+                <p>
+                    Visit us with your friends and family
+                    and enjoy a wonderful cafe experience.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+
+        <h2 class="heading">Our <span>Menu</span></h2>
+
+        <div class="menu-container">
+
+            <div class="food-card">
+                <img src="hotcoffee.jpeg" alt="Coffee">
+                <h3>Hot Coffee</h3>
+                <p>Freshly brewed coffee</p>
+                <h4>₹120</h4>
+                <button onclick="addToCart('Hot Coffee',120)">Add to Cart</button>
+            </div>
+
+            <div class="food-card">
+                <img src="sandwich.jpeg" alt="Sandwich">
+                <h3>Sandwich</h3>
+                <p>Fresh grilled sandwich</p>
+                <h4>₹150</h4>
+                <button onclick="addToCart('Sandwich',150)">Add to Cart</button>
+            </div>
+
+            <div class="food-card">
+                <img src="chocolatecake.jpeg" alt="Cake">
+                <h3>Chocolate Cake</h3>
+                <p>Delicious chocolate cake</p>
+                <h4>₹110</h4>
+                <button onclick="addToCart('Chocolate Cake',110)">Add to Cart</button>
+            </div>
+
+            <div class="food-card">
+                <img src="icedcoffee.jpeg" alt="Iced Coffee">
+                <h3>Iced Coffee</h3>
+                <p>Refreshing cold coffee</p>
+                <h4>₹140</h4>
+                <button onclick="addToCart('Iced Coffee',140)">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Cart Section -->
+    <section class="cart">
+
+        <h2 class="heading">Your <span>Cart</span></h2>
+
+        <div id="cart-items">
+            Your cart is empty.
+        </div>
+
+        <h3>Total: ₹<span id="total">0</span></h3>
+
+        <button class="order-btn" onclick="placeOrder()">
+            Order on WhatsApp
+        </button>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2 class="heading">Contact <span>Us</span></h2>
+
+        <div class="contact-content">
+            <h3>Corner Cafe</h3>
+
+            <p>📍 Anna road, Chennai</p>
+            <p>📞 +91 7395831556</p>
+            <p>✉ cornercafe@gmail.com</p>
+
+            <p>Opening Hours: 9 AM - 10 PM</p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Corner Cafe. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
